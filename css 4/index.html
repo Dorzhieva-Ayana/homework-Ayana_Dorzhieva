@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Позиционирование в CSS </title>
+    <style>
+    p{
+    text-align: justify;    
+    }
+.wrapper {
+  background-color: blue;
+  color: white;
+}
+.text2 {
+  background-color: grey;
+}
+.text3 {
+  display: inline-block;
+  color: white;
+  background-color: black;
+}
+.text4 {
+  display: none;
+  color: white;
+}
+.flex-container {
+  display: flex;
+  font-size: 20px;
+  flex-wrap: wrap;
+ width: 200px;
+  border: 1px solid blue;
+}
+.item {
+  border: 1px solid green;
+  padding: 5px;
+  color: green;
+}
+.static {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+}
+.relative {
+  position: relative;
+  bottom:10px;
+  left: 20px;
+}
+.absolute {
+  position: absolute;
+  left: 100px;
+  bottom: -300px;
+  border: 1px solid red;
+}
+  .fixed {
+ height: 20px; position: fixed; top: 400px; left: 100px; border: 1px solid black; background:red;
+}
+.flex-container2 {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 24px;
+  flex-wrap: wrap;
+ width: 230px;
+  border: 1px solid blue;
+}
+.wrapper2 {
+  position: relative;
+}
+
+.box1 {
+  position: relative;
+  z-index: 5;
+  border: dashed red;
+  height: 100px;
+  width: 600px;
+  
+}
+.box2 {
+  position: absolute;
+  z-index: 3; 
+  background: grey;
+  width: 800px;
+  left: 60px;
+  top: 60px;
+}
+.box3 {
+  position: absolute;
+  z-index: 2;
+  background:green;
+  width: 150px;
+  left: 100px;
+  top: -25px;
+  height: 120px;
+  
+}
+
+    </style> 
+</head>
+<body>
+    <h1> МЕТОДЫ ПОЗИЦИОНИРОВАНИЯ CSS </h1>
+    <h2> Базовый поток </h2>
+<div class="wrapper">
+  <div>Базовый элемент 1</div>
+  <div class="text2">Базовый элемент 2</div>
+</div>
+  <h2> DISPLAY </H2>
+  <div class="text3"> Инлайн 1</div>
+  <div class="text3"> Инлайн 2</div>
+  <div class= "text4"> Невидимый</div>
+  </div>  
+  <div class="flex-container">
+  <div class="item">каждый</div>
+  <div class="item">охотник</div>
+  <div class="item">желает</div>
+  <div class="item">знать</div>
+  <div class="item">где</div>
+  <div class="item">сидит</div>
+  <div class="item">фазан</div>
+  </div>
+  <h2>POSITION</h2>
+  <div class="static"> я статичен </div>
+  <div class="relative"> я относителен </div>
+  <div class="static"> я статичен </div>
+  <h3> Absolute</h3>
+  <div class="static"> статичный </div>
+  <div class="absolute"> абсолютный </div>
+  <div class="static"> статичный </div>
+   <h3> Fixed </h3>
+  <div class="static"> статичный </div>
+  <div class="fixed"> фиксированный </div>
+  <div class="static"> статичный </div>
+
+<h2> Flex-контейнер с направлением справа-налево</h2>
+<div class="flex-container2">
+ <div class="item">каждый</div>
+ <div class="item">охотник</div>
+ <div class="item">желает</div>
+ <div class="item">знать</div>
+ <div class="item">где</div>
+ <div class="item">сидит</div>
+ <div class="item">фазан</div>
+</div>
+<h2>z-index </h2>
+<p> Браузер выстраивает блоки страницы не только по вертикали и горизонтали, но и по глубине. Это встроенный механизм обработки документа. Чем ниже блок в разметке, тем выше он в стопке. Управлять порядком наложения блоков мы как раз и можем при помощи z-index.Свойство z-index позволяет управлять порядком наложения элементов друг на друга.
+В качестве значения используются целые числа (положительные, отрицательные и ноль). Чем больше значение, тем выше находится элемент по сравнению с теми элементами, у которых оно меньше. При равном значении z-index, на переднем плане находится тот элемент, который в коде HTML описан ниже. Допустимо использовать отрицательное значение. Кроме числовых значений применяется auto — порядок элементов в этом случае строится автоматически, исходя из их положения в коде HTML и принадлежности к родителю, поскольку дочерние элементы имеют тот же номер, что их родительский элемент.</p>
+<div class="wrapper2">
+  <div class="box1"> Блок1</div>
+  <div class="box2">Блок2</div>
+  <div class="box3">Блок3</div>
+</div>
+
+ </html>
