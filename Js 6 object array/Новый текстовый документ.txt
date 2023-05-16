@@ -1,0 +1,24 @@
+let food = {
+    Pizza: [
+        {ingredient: `тесто`, price: `100`, type: `дрожевое`, amount: `300 гр`},
+        {ingredient: `груша`, price: `200`, type: `зеленая твердая`, amount: `2 шт`},
+        {ingredient: `сыр`, price: `600`, type: `горгонзола`,amount: `150 гр`},
+        {ingredient: `грецкий орех`, price: `90`, amount: `3 шт`}
+    ],
+    Roll: [
+        {ingredient: `нори`, price: `10`, amount: `1 шт`},
+        {ingredient: `сыр`, price: `200`, type: `сливочный сыр Филадельфия`, amount: `100 гр`},
+        {ingredient: `рис`, price: `150`, type: `для суши`, amount: `130 гр`},
+        {ingredient: `огурец`, price: `30`, amount: `1 шт`},
+        {ingredient: `лосось`, price: `400`, type: `слабосоленый`, amount: `150 гр`},
+    ],
+    Buuza: [
+        {ingredient: `тесто`, price: `100`, amount: `500 гр`},
+        {ingredient: `фарш домашний`, price: `600`, amount: `1000 гр`},
+    ]
+}
+console.log (food);
+console.log (food.length);
+
+delete food[buuza];
+console.log (food [1]);

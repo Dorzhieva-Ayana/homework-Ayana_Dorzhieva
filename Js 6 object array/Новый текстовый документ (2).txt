@@ -1,0 +1,23 @@
+let Pizza = {
+        name: `Пицца с грушей и горгонзолой`,
+        ingredients: `тесто, сыр Горгонзола, груша`, 
+        price: `1000`,
+        size: `35 cm`       
+    };
+let Roll = {
+        name: `рол Филадельфия`,
+        ingredients: `нори, сыр Филадальфия, рис, огурец, лосось`, 
+        price: `750`,
+        weight: `500 grams`
+    };
+
+let Buuza = {
+        name: `Буузы`,
+        ingredients: `тесто, домашний фарш`, 
+        price: `90`,
+        weight: `70 grams`
+    };
+
+let food = [Pizza, Roll, Buuza];
+alert(food.length);
+console.log (food);
