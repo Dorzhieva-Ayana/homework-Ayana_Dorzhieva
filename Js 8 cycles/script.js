@@ -55,8 +55,8 @@ const FoodPrice = {
 for (let i = 0; i < food.length; i++) {
     food[i].cost = 0;
     for (let j = 0; j < food[i].ingredients.length; j++) {
-      const i2 = food[i].ingredients[j];
-      food[i].cost += FoodPrice[i2];
+      const k = food[i].ingredients[j];
+      food[i].cost += FoodPrice[k];
     }
     food[i].profit = food[i].price - food[i].cost;
 console.log (`себестоимость ${food[i].name} = ${food[i].cost};`)
