@@ -38,25 +38,35 @@ for (let i = 0; i < food.length; i++) {
       food[i].cost += FoodPrice[k];
     }
     food[i].profit = food[i].price - food[i].cost;
-
-    Roll.cost = cost (Roll);
-    console.log (Roll.cost);
   };
-
-
-
-
-
 
 // функция принимающая два числа и возвращающая меньшее из них
 
-function numbers ( a = 34,b = 7) {
+function numbers ( a = 743,b = 742) {
   if (a < b) {return a;}
             else {return b;}
 }
 
-// посчитать профит через функцию
+// функция для рассчета профита
+
+function profitOfFood (food, prices) {
+  let cost = 0;
+  for (let i = 0; i < food.ingredients.length; i++) {       
+     cost += prices[food.ingredients[i]];
+   }
+   const profit = food.price - cost;
+   return profit;
+ };
+
+Pizza.profit = profitOfFood (Pizza, FoodPrice);
+Roll.profit = profitOfFood (Roll, FoodPrice);
+Buuza.profit = profitOfFood (Buuza, FoodPrice);
+console.log(Pizza.profit);
+console.log(Roll.profit);
+console.log(Buuza.profit);
 
 
-
-
+for (dish of food) {
+  dish.profit = profitOfFood (dish, FoodPrice);
+  console.log(dish.profit);
+}
